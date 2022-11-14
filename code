@@ -1,0 +1,42 @@
+import java.util.*;
+
+ 
+public class App { // JAVA
+	
+    public static void main(String[] args) {
+		Scanner input = new Scanner(System.in); // to get input from user 
+		String word = input.nextLine(); // the word that will test it 
+	
+		char[] upper = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 
+		'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+
+		// to count how many upper case in the word 
+		  int countup=0;
+		  
+			// to throgh all letters in the word 
+			for(int i =0; i<word.length();i++){
+				// to check letters 
+				char a = word.charAt(i);
+				// to go through all upper array to check about upper letters 
+				for(int j =0;j<26;j++){
+					if(a==upper[j]){
+						// if the letter is upper case then plus one
+						countup++;
+					}
+				}
+			}
+		// to calculate is it more than half of the word or not 
+		int answer= word.length()/2;
+			// if upper case greater than half of leterrs then print uppercase
+			if(countup>answer){
+				System.out.println(word.toUpperCase());
+			}
+			else{
+				System.out.println(word.toLowerCase());
+	
+			}
+
+    }
+   //end of main class
+}
+//end of pakage class]
